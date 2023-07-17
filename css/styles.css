@@ -1,0 +1,30 @@
+*{
+    font-size: 62.5%;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* inisialisasi warna dengan dikasih nama */
+:root{
+    --blue1: #03045e; 
+    --blue2: #023e8a;
+    --blue3: #0077b6;
+    --blue4: #0096c7;
+    --blue5: #00b4d8;
+    --blue6: #48cae4;
+    --blue7: #90e0ef;
+    --blue8: #ade8f4;
+    --blue9: #caf0f8;
+}
+
+header{
+    margin: 2rem auto;
+}
+
+header h1{
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 900;
+}

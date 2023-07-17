@@ -11,11 +11,78 @@
 </head>
 <body>
 
+    <!-- HEADER TITLE KALKULATOR BMI -->
     <header id="header">
         <h1 id="title">Kalkulator BMI</h1>
     </header>
     
-    <section id=""></section>
+    <!-- INTRODUCTION SECTION (penjelasan tentang kalkulator BMI) -->
+    <section id="introduction">
+        <div id="intro-left">
+
+            <p id="intro-left-desc">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana dengan mu?</p>
+
+            <a id="link-to-form" href="#form-kalkulator-bmi">
+                <p id="intro-left-strong">Yuk, hitung sekarang di kalkulator BMI!<img id="turn-down-icon" src="turn-down.png" alt="arrow-turn-down"></img><img id="pointer" src="pointer.png" alt="pointer"></p>
+            </a>
+
+        </div>
+
+        <div id="intro-right">
+            <img id="icon-timbangan" src="scales.png" alt="icon-timbangan">
+        </div>
+    </section>
+
+    <!-- FORM SECTION KALKULATOR BMI -->
+    <section id="form-kalkulator-bmi">
+        <form id="form-bmi" action="">
+
+            <!-- CONTAINER GENDER INPUT -->
+            <div class="form-container" id="gender-input">
+
+                <label for="">choose your gender:</label>
+                <div class="gender-input" id="male-radio">
+                    <input class="gender-radio" type="radio" name="gender" id="male" checked required>
+                    <img id="colored-male" class="colored-gender" src="male.png" alt="male-icon">
+                    <img class="gray-gender" src="gray-male.png" alt="gray-male-icon">
+                    <label for="male" id="male-radio-label">Male</label>
+                </div>
+
+                <div class="gender-input" id="female-radio">
+                    <input class="gender-radio" type="radio" name="gender" id="female" required>
+                    <img id="colored-female" class="colored-gender" src="female.png" alt="female-icon">
+                    <img class="gray-gender" src="gray-female.png" alt="gray-female-icon">
+                    <label for="female" id="female-radio-label">Female</label>
+                </div>
+
+            </div>
+
+            <!-- CONTAINER AGE INPUT -->
+            <div class="form-container" id="age">
+
+                <label for="age-input">Input your age (tahun) : </label>
+                <input id="age-input" class="text-input" type="number" name="age" min="1" max="100" required>
+                
+            </div>
+
+            <!-- CONTAINER HEIGHT INPUT -->
+            <div class="form-container" id="height">
+
+                <label for="height-input">Input your height (cm): </label>
+                <input id="height-input" class="text-input" type="number" name="height" required>
+                
+            </div>
+
+            <!-- CONTAINER WEIGHT INPUT -->
+            <div class="form-container" id="weight">
+
+                <label for="height-input">Input your weight (kg): </label>
+                <input id="weight-input" class="text-input" type="number" name="weight" required>
+                
+            </div>
+
+        </form>
+    </section>
     
 </body>
 </html>

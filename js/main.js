@@ -5,16 +5,16 @@ submitButton.addEventListener("click", (event) => {
 //menggunakan fungsi event listener dengan action click button submit untuk menjalankan fungsi dibawah
 
 event.preventDefault();
+//prevent default supaya page tidak refresh setelah tekan tombol submit
 
     let ageInput = document.querySelector('#age-input').value;
     let heightInput = document.querySelector('#height-input').value;
     let weightInput = document.querySelector('#weight-input').value;
     let maleRadio = document.getElementById('male');
     let femaleRadio = document.getElementById('female');
-    
-
     //inisialisasi variabel yg diperlukan untuk perhitungan
 
+    //dibawah formula untuk validasi input
     if (ageInput == NaN || ageInput == 0 || ageInput == ''){
         alert('input your age!');
     }else if (ageInput < 17){
@@ -25,20 +25,26 @@ event.preventDefault();
         alert('Insert your weight!');
     }else if(ageInput >= 17){
     
+    // dibawah formula untuk hitung BMI
     heightInput = heightInput / 100;
 
     let BMI = weightInput / (heightInput * heightInput);
 
     BMI = BMI.toFixed(2);
 
+    // untuk menunjukkan hasil BMI 
     document.querySelector('#bmi-result').innerHTML = `${BMI}`;
 
     document.querySelector('#indicator').style.display = "block";
+    // di atas untuk mengubah style indikator gambar dari display: none; ke display: block;
 
+    // dibawah adalah formula untuk menunjukkan indikator tergantung dari hasil BMI
     if (BMI <= 18.5){
         document.querySelector('#penjelasan-hasil').innerHTML = `Anda berada di kategori kekurangan berat badan`;
         document.querySelector('#penjelasan-hasil-2').innerHTML = `Kami rekomendasikan untuk mencoba pola makan tiga kali sehari dan menambahkan porsi makan secukupnya`
+        // di atas adalah message untuk menjelaskan kondisi kesehatan
 
+        // dibawah untuk menunjukkan gambar indikasi berat badan
         if (maleRadio.checked){
             document.querySelector('#indicator').src = 'icon/underweight man.png';
         }else if (femaleRadio.checked){

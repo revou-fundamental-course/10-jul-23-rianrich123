@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <script src="js/main.js"></script>
+    
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fontawesome.css">
 </head>
@@ -23,35 +23,48 @@
             <p id="intro-left-desc">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana dengan mu?</p>
 
             <a id="link-to-form" href="#form-kalkulator-bmi">
-                <p id="intro-left-strong">Yuk, hitung sekarang di kalkulator BMI!<img id="turn-down-icon" src="turn-down.png" alt="arrow-turn-down"></img><img id="pointer" src="pointer.png" alt="pointer"></p>
+                <p id="intro-left-strong">Yuk, hitung sekarang di kalkulator BMI!<img id="turn-down-icon" src="icon/turn-down.png" alt="arrow-turn-down"></img><img id="pointer" src="icon/pointer.png" alt="pointer"></p>
             </a>
 
         </div>
 
         <div id="intro-right">
-            <img id="icon-timbangan" src="scales.png" alt="icon-timbangan">
+            <img id="icon-timbangan" src="icon/scales.png" alt="icon-timbangan">
         </div>
     </section>
 
+    <div id="container-calc-result">
+
     <!-- FORM SECTION KALKULATOR BMI -->
-    <section id="form-kalkulator-bmi">
-        <form id="form-bmi" action="">
+        <section id="form-kalkulator-bmi">
+        <form id="form-bmi">
+
+            <img id="hint-mark" src="icon/ask.png" alt="hint">
+            <div id="form-explanation">
+                <p>Keunggulan Fitur:</p>
+                <ul>
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                </ul>
+                <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter</p>
+                <p>Kalkulator akan memberi anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M<sup>2</sup>.</p>
+            </div>
 
             <!-- CONTAINER GENDER INPUT -->
             <div class="form-container" id="gender-input">
 
                 <label for="">choose your gender:</label>
                 <div class="gender-input" id="male-radio">
-                    <input class="gender-radio" type="radio" name="gender" id="male" checked required>
-                    <img id="colored-male" class="colored-gender" src="male.png" alt="male-icon">
-                    <img class="gray-gender" src="gray-male.png" alt="gray-male-icon">
+                    <input class="gender-radio" type="radio" name="gender" id="male" value="male" checked required>
+                    <img id="colored-male" class="colored-gender" src="icon/male.png" alt="male-icon">
+                    <img class="gray-gender" src="icon/gray-male.png" alt="gray-male-icon">
                     <label for="male" id="male-radio-label">Male</label>
                 </div>
 
                 <div class="gender-input" id="female-radio">
-                    <input class="gender-radio" type="radio" name="gender" id="female" required>
-                    <img id="colored-female" class="colored-gender" src="female.png" alt="female-icon">
-                    <img class="gray-gender" src="gray-female.png" alt="gray-female-icon">
+                    <input class="gender-radio" type="radio" name="gender" id="female" value="female" required>
+                    <img id="colored-female" class="colored-gender" src="icon/female.png" alt="female-icon">
+                    <img class="gray-gender" src="icon/gray-female.png" alt="gray-female-icon">
                     <label for="female" id="female-radio-label">Female</label>
                 </div>
 
@@ -81,8 +94,37 @@
                 
             </div>
 
+            <input id="submit-button" type="submit" value="Hitung BMI">
+
         </form>
-    </section>
+        </section>
+
+        <section id="result">
+
+            <h2>Your result is : </h1>
+
+            <div id="container-indicator-img">
+                <img id="indicator" src="" alt="indicator">
+            </div>
+
+            <h1 id="bmi-result"></h1>
+            
+            <div id="container-penjelasan">
+                <p class="penjelasan-hasil" id="penjelasan-hasil">
+                    
+                </p>
+                <p class="penjelasan-hasil" id="penjelasan-hasil-2">
+                    
+                </p>
+            </div>
+
+            
+
+        </section>
     
+    </div>
+
+    <script src="js/main.js"></script>
+
 </body>
 </html>

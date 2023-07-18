@@ -76,7 +76,7 @@ a{
     font-weight: 900;
     display: flex;
     align-items: center;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
     cursor: pointer;
     position: relative;;
 }
@@ -100,19 +100,27 @@ a{
 
 /* FORM KALKULATOR BMI */
 
+#container-calc-result{
+    display: flex;
+    margin: 15rem 0;
+}
+
 #form-kalkulator-bmi{
-    margin-top: 15rem;
+    width: 50%;
 }
 
 #form-bmi{
-    margin: 0 auto;
-    width: 75%;
     padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
 }
 
 .form-container{
-    width: 40%;
-    margin: 7rem auto;
+    width: 75%;
+    margin: 0 auto;
     display: flex;
 }
 
@@ -132,7 +140,7 @@ a{
     justify-content: center;
     align-items: center;
     position: relative;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
     gap: 1rem;
 }
 
@@ -157,7 +165,7 @@ a{
 
 .gender-input img{
     width: 10rem;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .colored-gender{
@@ -191,9 +199,104 @@ input[type="number"]::-webkit-inner-spin-button{
     border-radius: 8px;
     border: none;
     box-shadow: 0 0 3px #000000;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .text-input:hover{
     scale: 1.01;
+}
+
+#submit-button{
+    width: 50%;
+    height: 4rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: white;
+    background-color: var(--blue3);
+    border-radius: 8px;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 0 0 4px black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#submit-button:hover{
+    scale: 1.01;
+}
+
+/* result section */
+
+#result{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3.5rem;
+    align-items: center;
+}
+
+#result h1{
+    font-size: 5rem;
+}
+
+#result h2{
+    font-size: 3rem;
+}
+
+#hint-mark{
+    position: absolute;
+    width: 3rem;
+    right: 10rem;
+    top: 1px;
+}
+
+#hint-mark:hover + #form-explanation{
+    display: block;
+}
+
+#form-explanation{
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: white;
+    z-index: 2;
+    font-size: 2rem;
+    width: 30rem;
+    right: -15rem;
+    top: 4rem;
+    padding: 0.5rem 1rem;
+    text-align: justify;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+#form-explanation ul{
+    margin-left: 1.5rem;
+    list-style: decimal;
+    line-height: 2rem;
+    font-size: 2rem;
+}
+
+#form-explanation p{
+    margin: 0.5rem 0;
+}
+
+#container-penjelasan{
+    width: 85%;
+    margin: 1.5rem 0;
+}
+
+#penjelasan-hasil{
+    text-align: center;
+    font-size: 2.1rem;
+}
+
+.penjelasan-hasil{
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+#indicator{
+    display: none;
+    height: 20rem;
 }

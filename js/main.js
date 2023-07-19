@@ -32,6 +32,8 @@ event.preventDefault();
 
     BMI = BMI.toFixed(2);
 
+    document.querySelector('#container-waiting').style.display = 'none';
+
     // untuk menunjukkan hasil BMI 
     document.querySelector('#bmi-result').innerHTML = `${BMI}`;
 

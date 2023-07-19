@@ -243,7 +243,25 @@ input[type="number"]::-webkit-inner-spin-button{
     flex-direction: column;
     padding-top: 3.5rem;
     align-items: center;
+    position: relative;
 }
+
+#container-waiting{
+    position: absolute;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    top: 30%;
+    gap: 2rem;
+}
+
+#container-waiting img{
+    width: 15rem;
+}
+
+
 
 .result-h2{
     margin-bottom: 2rem;
@@ -251,6 +269,12 @@ input[type="number"]::-webkit-inner-spin-button{
 
 #result h1{
     font-size: 5rem;
+}
+
+#container-waiting h1{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 2rem;
 }
 
 #result h2{

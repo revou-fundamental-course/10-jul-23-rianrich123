@@ -66,7 +66,7 @@ header h1{
     font-size: 3rem;
 }
 
-a{
+#link-to-form{
     text-decoration: none;
     color: white;
 }
@@ -102,7 +102,7 @@ a{
 
 #container-calc-result{
     display: flex;
-    margin: 15rem 0;
+    margin: 8rem 0;
 }
 
 #form-kalkulator-bmi{
@@ -116,6 +116,10 @@ a{
     align-items: center;
     gap: 3rem;
     position: relative;
+}
+
+#title-form{
+    font-size: 3rem;
 }
 
 .form-container{
@@ -155,6 +159,12 @@ a{
     cursor: pointer;
     z-index: 2;
     opacity: 0;
+}
+
+#choose-gender{
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .form-container label{
@@ -235,6 +245,10 @@ input[type="number"]::-webkit-inner-spin-button{
     align-items: center;
 }
 
+.result-h2{
+    margin-bottom: 2rem;
+}
+
 #result h1{
     font-size: 5rem;
 }
@@ -245,9 +259,18 @@ input[type="number"]::-webkit-inner-spin-button{
 
 #hint-mark{
     position: absolute;
-    width: 3rem;
     right: 10rem;
     top: 1px;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    color: var(--blue3);
+    cursor: default;
+}
+
+#hint-mark img{
+    width: 1.4rem;
+    position: relative;
+    top: 1.4px;
 }
 
 #hint-mark:hover + #form-explanation{

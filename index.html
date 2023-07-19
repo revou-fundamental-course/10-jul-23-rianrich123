@@ -39,9 +39,13 @@
         <section id="form-kalkulator-bmi">
         <form id="form-bmi">
 
-            <img id="hint-mark" src="icon/ask.png" alt="hint">
+            <h1 id="title-form">Kalkulator</h1>
+
+            <a id="hint-mark">Apa itu BMI <img src="icon/ask.png" alt="ask"></a>
             <div id="form-explanation">
-                <p>Keunggulan Fitur:</p>
+
+                <p>BMI adalah indikator pengukuran yang digunakan untuk menentukan kategori berat badan ideal atau tidak. BMI dikembangkan oleh Adolphe Quetelet selama abad ke-19. Melalui hasil perhitungan BMI, Anda akan mengetahui kategori berat badan, yaitu kurus, ideal, berlebihan, atau bahkan obesitas.</p>
+                <p>Keunggulan Fitur :</p>
                 <ul>
                     <li>Menghitung berat badan</li>
                     <li>Menentukan kategori berat badan ideal atau tidak</li>
@@ -51,21 +55,22 @@
             </div>
 
             <!-- CONTAINER GENDER INPUT -->
+            <label id="choose-gender" for="">pilih jenis kelamin:</label>
             <div class="form-container" id="gender-input">
 
-                <label for="">choose your gender:</label>
+                
                 <div class="gender-input" id="male-radio">
                     <input class="gender-radio" type="radio" name="gender" id="male" value="male" checked required>
                     <img id="colored-male" class="colored-gender" src="icon/male.png" alt="male-icon">
                     <img class="gray-gender" src="icon/gray-male.png" alt="gray-male-icon">
-                    <label for="male" id="male-radio-label">Male</label>
+                    <label for="male" id="male-radio-label">laki-laki</label>
                 </div>
 
                 <div class="gender-input" id="female-radio">
                     <input class="gender-radio" type="radio" name="gender" id="female" value="female" required>
                     <img id="colored-female" class="colored-gender" src="icon/female.png" alt="female-icon">
                     <img class="gray-gender" src="icon/gray-female.png" alt="gray-female-icon">
-                    <label for="female" id="female-radio-label">Female</label>
+                    <label for="female" id="female-radio-label">perempuan</label>
                 </div>
 
             </div>
@@ -73,7 +78,7 @@
             <!-- CONTAINER AGE INPUT -->
             <div class="form-container" id="age">
 
-                <label for="age-input">Input your age (tahun) : </label>
+                <label for="age-input">masukan umur (tahun) : </label>
                 <input id="age-input" class="text-input" type="number" name="age" min="1" max="100" required>
                 
             </div>
@@ -81,7 +86,7 @@
             <!-- CONTAINER HEIGHT INPUT -->
             <div class="form-container" id="height">
 
-                <label for="height-input">Input your height (cm): </label>
+                <label for="height-input">masukan tinggi badan (cm): </label>
                 <input id="height-input" class="text-input" type="number" name="height" required>
                 
             </div>
@@ -89,7 +94,7 @@
             <!-- CONTAINER WEIGHT INPUT -->
             <div class="form-container" id="weight">
 
-                <label for="height-input">Input your weight (kg): </label>
+                <label for="height-input">masukan berat badan (kg): </label>
                 <input id="weight-input" class="text-input" type="number" name="weight" required>
                 
             </div>
@@ -101,7 +106,7 @@
 
         <section id="result">
 
-            <h2>Your result is : </h1>
+            <h2 class="result-h2">Hasil mu .. </h2>
 
             <div id="container-indicator-img">
                 <img id="indicator" src="" alt="indicator">

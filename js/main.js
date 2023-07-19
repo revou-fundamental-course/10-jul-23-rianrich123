@@ -37,7 +37,7 @@ event.preventDefault();
 
     document.querySelector('#indicator').style.display = "block";
     document.querySelector('#container-penjelasan').style.display = "block";
-    // di atas untuk mengubah style indikator gambar dari display: none; ke display: block;
+    // di atas untuk mengubah style indikator gambar dan penjelasan hasil dari display: none; ke display: block;
 
     // dibawah adalah formula untuk menunjukkan indikator tergantung dari hasil BMI
     if (BMI <= 18.5){
@@ -47,13 +47,16 @@ event.preventDefault();
 
         document.querySelector('#bmi-result').style.color = "#ff6700";
         document.querySelector('#penjelasan-hasil').style.color = "#ff6700";
+        // kode di atas untuk mengubah warna indikasi hasil BMI menjadi sesuai dengan hasil jika berat badan ideal atau tidak
 
-        // dibawah untuk menunjukkan gambar indikasi berat badan
+        // dibawah untuk menunjukkan gambar indikasi berat badan jika radio button male yang dipilih maka akan menunjukkan gambar laki-laki, dan jika radio female akan menunjukkan gambar perempuan
         if (maleRadio.checked){
             document.querySelector('#indicator').src = 'icon/underweight man.png';
         }else if (femaleRadio.checked){
             document.querySelector('#indicator').src = 'icon/underweight woman.png';
         }
+
+        // setelah itu dibawah hanya di ulang jika jarak BMI dari angka tertentu sampai angka tertentu dan akan mengeluarkan hasil yang berbeda
     }else if(BMI > 18.5 && BMI <= 24.9){
         document.querySelector('#penjelasan-hasil').innerHTML = `Berat badan yang ideal`;
         document.querySelector('#penjelasan-hasil-2').innerHTML = `Kami rekomendasikan untuk menetapkan pola makan yang sehat dan olah raga yang cukup`

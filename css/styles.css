@@ -284,9 +284,10 @@ input[type="number"]::-webkit-inner-spin-button{
 #container-penjelasan{
     width: 85%;
     margin: 1.5rem 0;
+    display: none;
 }
 
-#penjelasan-hasil{
+#init-penjelasan, #penjelasan-hasil{
     text-align: center;
     font-size: 2.1rem;
 }

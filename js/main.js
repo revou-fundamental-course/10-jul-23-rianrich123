@@ -36,13 +36,17 @@ event.preventDefault();
     document.querySelector('#bmi-result').innerHTML = `${BMI}`;
 
     document.querySelector('#indicator').style.display = "block";
+    document.querySelector('#container-penjelasan').style.display = "block";
     // di atas untuk mengubah style indikator gambar dari display: none; ke display: block;
 
     // dibawah adalah formula untuk menunjukkan indikator tergantung dari hasil BMI
     if (BMI <= 18.5){
-        document.querySelector('#penjelasan-hasil').innerHTML = `Anda berada di kategori kekurangan berat badan`;
+        document.querySelector('#penjelasan-hasil').innerHTML = `Kekurangan berat badan`;
         document.querySelector('#penjelasan-hasil-2').innerHTML = `Kami rekomendasikan untuk mencoba pola makan tiga kali sehari dan menambahkan porsi makan secukupnya`
         // di atas adalah message untuk menjelaskan kondisi kesehatan
+
+        document.querySelector('#bmi-result').style.color = "#ff6700";
+        document.querySelector('#penjelasan-hasil').style.color = "#ff6700";
 
         // dibawah untuk menunjukkan gambar indikasi berat badan
         if (maleRadio.checked){
@@ -51,8 +55,11 @@ event.preventDefault();
             document.querySelector('#indicator').src = 'icon/underweight woman.png';
         }
     }else if(BMI > 18.5 && BMI <= 24.9){
-        document.querySelector('#penjelasan-hasil').innerHTML = `Anda berada di kategori berat badan yang ideal`;
+        document.querySelector('#penjelasan-hasil').innerHTML = `Berat badan yang ideal`;
         document.querySelector('#penjelasan-hasil-2').innerHTML = `Kami rekomendasikan untuk menetapkan pola makan yang sehat dan olah raga yang cukup`
+
+        document.querySelector('#bmi-result').style.color = "#80b918";
+        document.querySelector('#penjelasan-hasil').style.color = "#80b918";
 
         if (maleRadio.checked){
             document.querySelector('#indicator').src = 'icon/normal man.png';
@@ -60,8 +67,11 @@ event.preventDefault();
             document.querySelector('#indicator').src = 'icon/normal woman.png';
         }
     }else if (BMI >= 25.0 && BMI <= 29.9){
-        document.querySelector('#penjelasan-hasil').innerHTML = `Anda berada di kategori berat badan yang kurang ideal`;
+        document.querySelector('#penjelasan-hasil').innerHTML = `Berat badan yang kurang ideal`;
         document.querySelector('#penjelasan-hasil-2').innerHTML = `Kami rekomendasikan untuk menetapkan pola makan yang sudah dijalankan tetapi mengurangi porsi makan dengan secukupnya dan olah raga yang cukup`
+
+        document.querySelector('#bmi-result').style.color = "#ff6700";
+        document.querySelector('#penjelasan-hasil').style.color = "#ff6700";
 
         if (maleRadio.checked){
             document.querySelector('#indicator').src = 'icon/overweight man.png';
@@ -69,8 +79,11 @@ event.preventDefault();
             document.querySelector('#indicator').src = 'icon/overweight woman.png';
         }
     }else if (BMI >= 30.0){
-        document.querySelector('#penjelasan-hasil').innerHTML = `Anda berada di kategori berat badan yang berlebihan`;
+        document.querySelector('#penjelasan-hasil').innerHTML = `Berat badan yang berlebihan`;
         document.querySelector('#penjelasan-hasil-2').innerHTML = `Kami rekomendasikan untuk menormalkan pola makan tiga kali sehari dan mengurangi porsi makan yang belebihan dan juga memulai olah raga yang teratur sesuai dengan instruksi dokter`
+
+        document.querySelector('#bmi-result').style.color = "#F32013";
+        document.querySelector('#penjelasan-hasil').style.color = "#F32013";
 
         if (maleRadio.checked){
             document.querySelector('#indicator').src = 'icon/obese man.png';
